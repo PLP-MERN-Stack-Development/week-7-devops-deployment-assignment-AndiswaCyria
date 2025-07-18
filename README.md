@@ -1,78 +1,182 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19956195&assignment_repo_type=AssignmentRepo)
-# Deployment and DevOps for MERN Applications
+# 🐞 MERN Bug Tracker
 
-This assignment focuses on deploying a full MERN stack application to production, implementing CI/CD pipelines, and setting up monitoring for your application.
+A full-stack MERN (MongoDB, Express, React, Node.js) application that allows users to report, view, update, delete, and search software bugs. This project also demonstrates production deployment and DevOps skills including CI/CD using GitHub Actions and hosting via Render.
 
-## Assignment Overview
+---
 
-You will:
-1. Prepare your MERN application for production deployment
-2. Deploy the backend to a cloud platform
-3. Deploy the frontend to a static hosting service
-4. Set up CI/CD pipelines with GitHub Actions
-5. Implement monitoring and maintenance strategies
+## 🚀 Features
 
-## Getting Started
+- Report new bugs with a title and description
+- View all reported bugs
+- Search for bugs by title
+- Responsive and user-friendly UI
+- Backend API with validation and error handling
+- Deployment via Render
+- CI/CD enabled via GitHub Actions
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week7-Assignment.md` file
-4. Use the provided templates and configuration files as a starting point
+---
 
-## Files Included
+## 🌐 Live Deployment
 
-- `Week7-Assignment.md`: Detailed assignment instructions
-- `.github/workflows/`: GitHub Actions workflow templates
-- `deployment/`: Deployment configuration files and scripts
-- `.env.example`: Example environment variable templates
-- `monitoring/`: Monitoring configuration examples
+Frontend: [https://week-7-bug-tracker-client.onrender.com](https://week-7-bug-tracker-client.onrender.com)  
+Backend: [https://week-6-test-debug-assignment-andiswacyria.onrender.com](https://week-6-test-debug-assignment-andiswacyria.onrender.com)
 
-## Requirements
+---
 
-- A completed MERN stack application from previous weeks
-- Accounts on the following services:
-  - GitHub
-  - MongoDB Atlas
-  - Render, Railway, or Heroku (for backend)
-  - Vercel, Netlify, or GitHub Pages (for frontend)
-- Basic understanding of CI/CD concepts
+## 🛠️ Tech Stack
 
-## Deployment Platforms
+- **Frontend:** React.js, Vite, CSS
+- **Backend:** Node.js, Express.js, MongoDB (Atlas)
+- **DevOps:** Render (deployment), GitHub Actions (CI/CD)
+- **Version Control:** Git + GitHub
 
-### Backend Deployment Options
-- **Render**: Easy to use, free tier available
-- **Railway**: Developer-friendly, generous free tier
-- **Heroku**: Well-established, extensive documentation
+---
 
-### Frontend Deployment Options
-- **Vercel**: Optimized for React apps, easy integration
-- **Netlify**: Great for static sites, good CI/CD
-- **GitHub Pages**: Free, integrated with GitHub
+## 📦 Installation
 
-## CI/CD Pipeline
+Clone the repo:
 
-The assignment includes templates for setting up GitHub Actions workflows:
-- `frontend-ci.yml`: Tests and builds the React application
-- `backend-ci.yml`: Tests the Express.js backend
-- `frontend-cd.yml`: Deploys the frontend to your chosen platform
-- `backend-cd.yml`: Deploys the backend to your chosen platform
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/week-7-devops-deployment-assignment-AndiswaCyria.git
+cd week-7-devops-deployment-assignment-AndiswaCyria
+```
 
-## Submission
+## 📁 Folder Structure
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+```
+mern-bug-tracker/
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── tests/
+│   ├── .env
+│   └── server.js
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── tests/
+│   └── package.json
+```
 
-1. Complete all deployment tasks
-2. Set up CI/CD pipelines with GitHub Actions
-3. Deploy both frontend and backend to production
-4. Document your deployment process in the README.md
-5. Include screenshots of your CI/CD pipeline in action
-6. Add URLs to your deployed applications
+---
 
-## Resources
+## ⚙️ Installation & Setup
 
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [MongoDB Atlas Documentation](https://docs.atlas.mongodb.com/)
-- [Render Documentation](https://render.com/docs)
-- [Railway Documentation](https://docs.railway.app/)
-- [Vercel Documentation](https://vercel.com/docs)
-- [Netlify Documentation](https://docs.netlify.com/) 
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/week-7-devops-deployment-assignment-AndiswaCyria.git
+cd mern-bug-tracker
+```
+
+### 2. Backend Setup
+
+```bash
+cd backend
+pnpm install
+pnpm run dev
+```
+
+### 3. Frontend Setup
+
+```bash
+cd frontend
+pnpm install
+pnpm run dev
+```
+
+The frontend will run on `https://week-6-test-debug-assignment-andiswacyria.onrender.com/`.
+
+---
+
+## 🧪 Running Tests
+
+### Backend Tests
+
+```bash
+cd backend
+pnpm test
+```
+
+Tests:
+- API route integration tests with Supertest
+- DB mocks with `jest.mock`
+- Validation and error handling tests
+
+Mongo DB Compass
+
+![MongoDB Compass linked](/mern-bug-tracker/frontend/public/mongo.png)
+
+### Frontend Tests
+
+```bash
+cd frontend
+pnpm test
+```
+
+Tests:
+- Form submission with valid/invalid input
+- Search and filter UI tests
+- Simulated API interaction and error responses
+
+---
+
+## 🐛 Debugging Techniques Used
+
+- Console logs and `console.error` for runtime insights
+- Chrome DevTools (Network & Console tabs)
+- Node.js `--inspect` debugging
+- Express error handling middleware
+- JSDOM alerts and mocked fetch in frontend tests
+
+---
+
+## 🛡 Error Handling
+
+### Backend:
+- Centralized Express error middleware
+- Validates request input and handles missing fields
+
+### Frontend:
+- Alerts for failed form submissions or network errors
+- Graceful fallbacks for empty state and load errors
+
+---
+
+## 📷 Screenshots 
+
+Add screenshots or GIFs of:
+- Reporting a bug
+![reporting a bug](/mern-bug-tracker/frontend/public/reportingbug.png)
+
+- Updating status
+![updates status](/mern-bug-tracker/frontend/public/filterByStatus.png)
+
+- Filtering/search
+![search](/mern-bug-tracker/frontend/public/search.png)
+
+- Test results
+![test results](/mern-bug-tracker/frontend/public/test.png)
+---
+
+## 📌 Future Improvements
+
+- Authentication for bug submitters
+- Assign bugs to users
+- Admin dashboard view
+- Use a toast notification system instead of `alert()`
+
+---
+
+## 📄 License
+
+MIT License — free to use and modify.
+
+---
+
+## 🙌 Acknowledgements
+
+This project is part of a MERN full-stack training program (Week 6 Assignment: Testing & Debugging).
